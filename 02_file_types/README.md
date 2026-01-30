@@ -20,3 +20,18 @@ less -S /storage/hpc/work/lh106/SharedData/AncientimputedVCF/Data_Katia_merged_p
 
 
 
+#!/bin/bash 
+#SBATCH --job-name=combine 
+#SBATCH --account=commons 
+#SBATCH --partition=commons 
+#SBATCH --ntasks=1 
+#SBATCH --mem-per-cpu=1000m 
+#SBATCH --time=00:30:00 
+#SBATCH --output=/home/lh106/Rice/logfiles/out.out 
+#SBATCH --error=/home/lh106/Rice/logfiles/out.err
+
+VCF=/scratch/lh106/results/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
+OUT=/scratch/lh106/AL2022_Turkey.vcf
+
+grep "AL2022_Turkey" ${VCF} > ${OUT}
+
