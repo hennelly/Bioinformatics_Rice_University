@@ -17,3 +17,6 @@ samtools view  | less
 ```
 less -S /storage/hpc/work/lh106/SharedData/AncientimputedVCF/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
 ```
+
+
+
