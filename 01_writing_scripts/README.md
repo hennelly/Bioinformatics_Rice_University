@@ -2,6 +2,17 @@
 
 There is a specific way we run scripts on the cluster. These scripts tell the super computing cluster what to do and how to analyze the data. 
 
+### Setting up directory 
+```
+mkdir Projects
+cd Project
+mkdir Bio310
+cd Bio310
+mkdir scripts
+mkdir slurmout
+cd scripts
+```
+
 ### Here's an example script: 
 - Made the script:
 ```
@@ -12,9 +23,6 @@ touch example.sh
 vim example.sh
 ```
 - Enter information
-
-
-
 ```
 #!/bin/bash 
 #SBATCH --job-name=combine 
@@ -23,10 +31,27 @@ vim example.sh
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/lh106/Rice/logfiles/out.out
+#SBATCH --output=/home/lh106/Rice/logfiles/out.out 
 #SBATCH --error=/home/lh106/Rice/logfiles/out.err
 
-cat V300066577_L2_DKWGS201203039-531_1.fq.gz V300066577_L2_DKWGS201203039-532_1.fq.gz V300074477_L1_DKWGS201203039-531_1.fq.gz V300074477_L1_DKWGS201203039-532_1.fq.gz V300074519_L4_DKWGS201203039-531_1.fq.gz V300074519_L4_DKWGS201203039-532_1.fq.gz > Africanwolf_Algeria_MJ109_1.fq.gz
-cat V300066577_L2_DKWGS201203039-531_2.fq.gz V300066577_L2_DKWGS201203039-532_2.fq.gz V300074477_L1_DKWGS201203039-531_2.fq.gz V300074477_L1_DKWGS201203039-532_2.fq.gz V300074519_L4_DKWGS201203039-531_2.fq.gz V300074519_L4_DKWGS201203039-532_2.fq.gz > Africanwolf_Algeria_MJ109_2.fq.gz
+VCF=/storage/hpc/work/lh106/SharedData/AncientimputedVCF/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
+OUT=/storage/hpc/work/lh106/test/AL2022_Turkey.vcf
+
+grep "AL2022_Turkey" ${VCF} > ${OUT}
 ```
+
+- Run script
+```
+sbatch example.sh
+```
+- Check script
+```
+squeue -u lh106 
+```
+- Check error file
+```
+less /home/lh106/Rice/logfiles/out.err
+```
+
+
 
