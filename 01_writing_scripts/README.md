@@ -54,6 +54,30 @@ less /home/lh106/Rice/logfiles/out.err
 ```
 
 
+# Run another script: 
+```
+#!/bin/bash
+#SBATCH --job-name=combine
+#SBATCH --account=commons
+#SBATCH --partition=commons
+#SBATCH --ntasks=1
+#SBATCH --mem-per-cpu=1000m
+#SBATCH --time=00:30:00
+#SBATCH --output=/home/lh106/Rice/logfiles/out2.out
+#SBATCH --error=/home/lh106/Rice/logfiles/out2.err
+
+VCF=/scratch/lh106/results/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
+OUT=/scratch/lh106/AL2022_Turkey_chr11.vcf
+\
+
+/home/lh106/software/vcftools/src/cpp/vcftools --gzvcf ${VCF} \
+--indv AL2022_Turkey \
+--recode \
+--recode-INFO-all \
+--out ${OUT}
+
+```
+
 
 
 
