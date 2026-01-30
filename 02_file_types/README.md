@@ -15,7 +15,7 @@ samtools view /storage/hpc/work/lh106/SharedData/AncientimputedVCF/Projects_CPH_
 
 - A variant call format (VCF) file contains the variants along the genome for a single individual, or multiple individuals.
 ```
-less -S /storage/hpc/work/lh106/SharedData/AncientimputedVCF/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
+less -S /scratch/lh106/results/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
 ```
 
 
