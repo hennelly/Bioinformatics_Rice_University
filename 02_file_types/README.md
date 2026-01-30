@@ -1,7 +1,5 @@
 # File types
 
-## Fastq file 
-
 - A fastq.gz file contains the raw reads that are not aligned to the reference genome. Let's see what a fastq.gz file looks like:
 
 ```
