@@ -10,7 +10,7 @@ less /scratch/lh106/rawfiles/V300066577_L2_DKWGS201203039-531_1.fq.gz
 
 ```
 module load SAMtools/1.19.2
-samtools view Projects_CPH_Chapter2_bams_S21_1038_Chitral_sorted_proper_nodups_readgroup.bam | less -S
+samtools view /storage/hpc/work/lh106/SharedData/AncientimputedVCF/Projects_CPH_Chapter2_bams_S21_1038_Chitral_sorted_proper_nodups_readgroup.bam | less -S
 ```
 
 - A variant call format (VCF) file contains the variants along the genome for a single individual, or multiple individuals.
