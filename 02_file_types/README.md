@@ -10,9 +10,9 @@ less /scratch/lh106/rawfiles/V300066577_L2_DKWGS201203039-531_1.fq.gz
 
 ```
 module load SAMtools/1.19.2
-samtools view  | less 
-
+samtools view Projects_CPH_Chapter2_bams_S21_1038_Chitral_sorted_proper_nodups_readgroup.bam | less -S
 ```
+
 - A variant call format (VCF) file contains the variants along the genome for a single individual, or multiple individuals.
 ```
 less -S /storage/hpc/work/lh106/SharedData/AncientimputedVCF/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
@@ -20,18 +20,4 @@ less -S /storage/hpc/work/lh106/SharedData/AncientimputedVCF/Data_Katia_merged_p
 
 
 
-#!/bin/bash 
-#SBATCH --job-name=combine 
-#SBATCH --account=commons 
-#SBATCH --partition=commons 
-#SBATCH --ntasks=1 
-#SBATCH --mem-per-cpu=1000m 
-#SBATCH --time=00:30:00 
-#SBATCH --output=/home/lh106/Rice/logfiles/out.out 
-#SBATCH --error=/home/lh106/Rice/logfiles/out.err
-
-VCF=/scratch/lh106/results/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
-OUT=/scratch/lh106/AL2022_Turkey.vcf
-
-grep "AL2022_Turkey" ${VCF} > ${OUT}
 
