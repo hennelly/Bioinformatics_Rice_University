@@ -8,11 +8,11 @@ ssh -Y lh106@nots.rice.edu
 yourpassword
 
 # Navigating the cluster 
-
+```
 pwd #print working directory
 ls #print directory information
 cd #change directory
-
+```
 # Cluster structure 
 - Your home directory: /home/yourID
 - Storage:  /storage/hpc/work/lh106
