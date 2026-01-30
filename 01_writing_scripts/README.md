@@ -34,8 +34,8 @@ vim example.sh
 #SBATCH --output=/home/lh106/Rice/logfiles/out.out 
 #SBATCH --error=/home/lh106/Rice/logfiles/out.err
 
-VCF=/storage/hpc/work/lh106/SharedData/AncientimputedVCF/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
-OUT=/storage/hpc/work/lh106/test/AL2022_Turkey.vcf
+VCF=/scratch/lh106/results/Data_Katia_merged_phased_annotated.chr11_MAF_0.01_recalibrated_INFO_0.8.vcf
+OUT=/scratch/lh106/AL2022_Turkey.vcf
 
 grep "AL2022_Turkey" ${VCF} > ${OUT}
 ```
@@ -52,6 +52,11 @@ squeue -u lh106
 ```
 less /home/lh106/Rice/logfiles/out.err
 ```
+
+
+
+
+
 
 
 
