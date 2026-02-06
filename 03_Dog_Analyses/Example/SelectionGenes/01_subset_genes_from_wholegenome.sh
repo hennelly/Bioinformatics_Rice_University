@@ -32,7 +32,8 @@ vim TKTL1.bed
 chrom   chromStart      chromEnd
 chrX    122007282       122034255
 
-chrom   chromStart      chromEnd
-
-
 #Copy and paste the gene location with tabs between 
+
+# Move /scratch/lh106/downloads/1715g_WildSled.SNP.INDEL.chrAll_minDP3_maxmissing0.8_noindels_bialleleic_minQ30_dogswolves_again_chrX_final.recode_COPY.vcf.gz to your local scratch
+
+
