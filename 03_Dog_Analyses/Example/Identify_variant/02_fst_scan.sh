@@ -11,7 +11,7 @@
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
-VCF=/scratch/yourID/Dog_Selection/Results/KRT71_filtered.recode.vcf
+VCF=/scratch/yourID/Dog_Selection/Results/TKTL1_filtered.recode.vcf
 DIR=/scratch/yourID/Dog_Selection/Results
 dogpop_curly=/scratch/yourID/Dog_Selection/Files/KRT71_curlydogs.txt
 dogpop_noncurly=/scratch/yourID/Dog_Selection/Files/KRT71_noncurlydogs.txt
@@ -22,7 +22,7 @@ vcftools --gzvcf ${VCF} \
 --max-missing 0.8 \
 --weir-fst-pop ${dogpop_curly} \
 --weir-fst-pop ${dogpop_noncurly} \
---out ${OUT}/KRT71_filtered_fst_results
+--out ${OUT}/TKTL1_filtered_fst_results
 
 ## Make the dog population files 
 touch /scratch/yourID/Dog_Selection/Files/KRT71_curlydogs.txt
