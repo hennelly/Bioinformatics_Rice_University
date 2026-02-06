@@ -8,10 +8,12 @@
 #SBATCH --output=/home/yourname/Rice/Dog_Selection/slurmout/plink.out 
 #SBATCH --error=/home/yourname/Rice/Dog_Selection/slurmout/plink.err
 
-OUT=/scratch/yourID/Dog_Selection/Results/KRT71_vcf.recode.vcf
-OUTBED=/scratch/Dog_Selection/results/KRT71_bed
-OUTPLINK=/scratch/Dog_Selection/results/KRT71_plink
-OUTVCF_final=/scratch/Dog_Selection/results/KRT71_plink_finalcoded
+scratch/lh106/Dog_Selection/Results/TKTL1
+
+OUT=/scratch/yourID/Dog_Selection/Results/TKTL1.recode.vcf
+OUTBED=/scratch/Dog_Selection/Results/TKTL1_bed
+OUTPLINK=/scratch/Dog_Selection/Results/TKTL1_plink
+OUTVCF_final=/scratch/Dog_Selection/Results/TKTL1_plink_finalcoded
 
 /home/lh106/software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} #to sort the chromosomes
 /home/lh106/software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
@@ -27,12 +29,12 @@ unzip plink_linux_x86_64_20250819.zip
 ./plink
 
 ##### Convert vcf to coding ######
-sed -i 's:0/0:0:g' KRT71_plink_finalcoded.vcf
-sed -i 's:0/1:1:g' KRT71_plink_finalcoded.vcf
-sed -i 's:1/0:1:g' KRT71_plink_finalcoded.vcf
-sed -i 's:1/1:2:g' KRT71_plink_finalcoded.vcf
-sed -i 's:./.:3:g' KRT71_plink_finalcoded.vcf
+sed -i 's:0/0:0:g' TKTL1_plink_finalcoded.vcf
+sed -i 's:0/1:1:g' TKTL1_plink_finalcoded.vcf
+sed -i 's:1/0:1:g' TKTL1_plink_finalcoded.vcf
+sed -i 's:1/1:2:g' TKTL1_plink_finalcoded.vcf
+sed -i 's:./.:3:g' TKTL1_plink_finalcoded.vcf
 
 
 ### Move to local computer 
-scp -r lh106@nots.rice.edu:/scratch/Dog_Selection/results/KRT71_plink_finalcoded.vcf ~/Desktop
+scp -r lh106@nots.rice.edu:/scratch/Dog_Selection/results/TKTL1_plink_finalcoded.vcf ~/Desktop
