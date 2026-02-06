@@ -26,6 +26,17 @@ unzip plink_linux_x86_64_20250819.zip
 #test
 ./plink
 
+##### Convert vcf to coding ######
+sed -i 's:0/0:0:g' KRT71_plink_finalcoded.vcf
+sed -i 's:0/1:1:g' KRT71_plink_finalcoded.vcf
+sed -i 's:1/0:1:g' KRT71_plink_finalcoded.vcf
+sed -i 's:1/1:2:g' KRT71_plink_finalcoded.vcf
+sed -i 's:./.:3:g' KRT71_plink_finalcoded.vcf
+
+
+### Move to local computer 
+scp -r lh106@nots.rice.edu:/scratch/Dog_Selection/results/KRT71_plink_finalcoded.vcf ~/Desktop
+
 
 
 
