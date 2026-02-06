@@ -1,8 +1,11 @@
 library(ggplot2)
 library(dplyr)
 
-fst <- read.table("fst.txt", header = TRUE)
 
+fst <- read.table("KRT71_filtered_fst_noNAN_results_sort.weir.fst.txt", header = TRUE)
 
-ggplot(fst, aes(x = BPcum, y = FST, color = CHR)) +
-  geom_point(size = 0.6)
+head(fst0
+#look at headers 
+     
+ggplot(fst, aes(x = Position, y = Fst)) +
+  geom_point()
