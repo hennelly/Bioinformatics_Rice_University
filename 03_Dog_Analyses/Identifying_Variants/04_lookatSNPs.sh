@@ -15,5 +15,10 @@ sort -k3,3nr ${OUTFILE} > ${OUTFILE}
 
 wc -l ${$OUTFILE}
 
+### Move to local computer 
+scp -r lh106@nots.rice.edu:/scratch/yourID/Dog_Selection/Results/KRT71_filtered_fst_noNAN_results_sort.weir.fst.txt ~/Desktop
+
+
+
 
 
