@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/yourname/Rice/Dog_Selection/slurmout/vcfout.out 
-#SBATCH --error=/home/yourname/Rice/Dog_Selection/slurmout/vcfout.err
+#SBATCH --output=/home/ak308/Bio310/output/vcfout.out 
+#SBATCH --error=/home/ak308/Bio310/output/vcfout.err
 
 
 module load GCC/13.3.0
@@ -14,7 +14,7 @@ module load VCFtools/0.1.17
 
 VCF=/scratch/lh106/downloads/1715g_WildSled.SNP.INDEL.chrAll_minDP3_maxmissing0.8_noindels_bialleleic_minQ30_dogswolves_again_chrX_final.recode.vcf.gz
 BEDIN=/scratch/lh106/bedfiles/TKTL1.bed
-OUT=/scratch/lh106/Dog_Selection/Results/TKTL1
+OUT=/scratch/ak308/Bio310_Dog/Results/TKTL1
 
 vcftools --gzvcf ${VCF} --bed  ${BEDIN} --recode --recode-INFO-all --out ${OUT}
 
@@ -22,13 +22,13 @@ vcftools --gzvcf ${VCF} --bed  ${BEDIN} --recode --recode-INFO-all --out ${OUT}
 #How to make a bed file #
 #########################
 
-/scratch/yourID/ 
 mkdir bedfiles
-touch TKTL1.bed
-vim TKTL1.bed
-
+touch KRT71.bed
+i
 chrom   chromStart      chromEnd
 chrX    122007282       122034255
+[press escape]
+:wq
 
 #Copy and paste the gene location with tabs between 
 
