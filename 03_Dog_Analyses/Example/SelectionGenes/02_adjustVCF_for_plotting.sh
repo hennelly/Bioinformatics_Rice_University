@@ -15,7 +15,7 @@ OUTBED=/scratch/Dog_Selection/Results/TKTL1_bed
 OUTPLINK=/scratch/Dog_Selection/Results/TKTL1_plink
 OUTVCF_final=/scratch/Dog_Selection/Results/TKTL1_plink_finalcoded
 
-/home/lh106/software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} #to sort the chromosomes
+/home/ak/software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} #to sort the chromosomes
 /home/lh106/software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
 /home/lh106/software/plink --file  ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
 
