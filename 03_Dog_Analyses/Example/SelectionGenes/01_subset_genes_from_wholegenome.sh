@@ -8,9 +8,7 @@
 #SBATCH --output=/home/yourname/Rice/Dog_Selection/slurmout/vcfout.out 
 #SBATCH --error=/home/yourname/Rice/Dog_Selection/slurmout/vcfout.err
 
-# Grab the THSR gene and the TKTL1 haplotype
-# do dxy fst within the TKTL1 haplotype
-
+\
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
