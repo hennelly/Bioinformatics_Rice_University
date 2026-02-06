@@ -5,19 +5,19 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/yourname/Rice/Dog_Selection/slurmout/plink.out 
-#SBATCH --error=/home/yourname/Rice/Dog_Selection/slurmout/plink.err
+#SBATCH --output=/home/ak308/Bio310/output/plink.out 
+#SBATCH --error=/home/ak308/Bio310/output/plink.err
 
 scratch/lh106/Dog_Selection/Results/TKTL1
 
-OUT=/scratch/yourID/Dog_Selection/Results/TKTL1.recode.vcf
-OUTBED=/scratch/Dog_Selection/Results/TKTL1_bed
-OUTPLINK=/scratch/Dog_Selection/Results/TKTL1_plink
-OUTVCF_final=/scratch/Dog_Selection/Results/TKTL1_plink_finalcoded
+OUT=/scratch/ak308/Bio310_Dog/Results/TKTL1.recode.vcf
+OUTBED=/scratch/ak308/Bio310_Dog/Results/TKTL1_bed
+OUTPLINK=/scratch/ak308/Bio310_Dog/Results/TKTL1_plink
+OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/TKTL1_plink_finalcoded
 
-/home/ak/software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} #to sort the chromosomes
-/home/lh106/software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
-/home/lh106/software/plink --file  ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
+/home/ak308/software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} #to sort the chromosomes
+/home/ak308/software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
+/home/ak308/software/plink --file  ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
 
 ## might also have to download plink 
 cd /home/yourID
