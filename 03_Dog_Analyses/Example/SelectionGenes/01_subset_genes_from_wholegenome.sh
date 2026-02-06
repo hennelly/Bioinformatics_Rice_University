@@ -8,7 +8,7 @@
 #SBATCH --output=/home/yourname/Rice/Dog_Selection/slurmout/vcfout.out 
 #SBATCH --error=/home/yourname/Rice/Dog_Selection/slurmout/vcfout.err
 
-\
+
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
