@@ -5,13 +5,14 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/lh106/Rice/Dog_Selection/slurmout/plink.out 
-#SBATCH --error=/home/lh106/Rice/Dog_Selection/slurmout/plink.err
+#SBATCH --output=/home/lh106/Rice/Dog_Selection/slurmout/TKTL1filter.out 
+#SBATCH --error=/home/lh106/Rice/Dog_Selection/slurmout/TKTL1filter.err
 
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
-VCF=/scratch/yourID/Dog_Selection/Results/KRT71_vcf.recode.vcf
+
+VCF=/scratch/yourID/Dog_Selection/Results/TKTL1.recode.vcf
 DIR=/scratch/yourID/Dog_Selection/Results
 
 vcftools --vcf ${VCF} \
@@ -20,4 +21,4 @@ vcftools --vcf ${VCF} \
 --max-missing 0.8 \
 --recode \
 --recode-INFO-all \
---out ${DIR}/KRT71_filtered
+--out ${DIR}/TKTL1_filtered
