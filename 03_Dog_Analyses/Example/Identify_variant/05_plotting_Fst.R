@@ -2,7 +2,7 @@ library(ggplot2)
 library(dplyr)
 
 
-fst <- read.table("KRT71_filtered_fst_noNAN_results_sort.weir.fst.txt", header = TRUE)
+fst <- read.table("TKTL1_filtered_nonan.weir_sort.fst.txt", header = TRUE)
 
 head(fst0
 #look at headers 
