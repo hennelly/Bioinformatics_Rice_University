@@ -8,8 +8,6 @@
 #SBATCH --output=/home/ak308/Bio310/output/plink.out 
 #SBATCH --error=/home/ak308/Bio310/output/plink.err
 
-scratch/lh106/Dog_Selection/Results/TKTL1
-
 OUT=/scratch/ak308/Bio310_Dog/Results/TKTL1.recode.vcf
 OUTBED=/scratch/ak308/Bio310_Dog/Results/TKTL1_bed
 OUTPLINK=/scratch/ak308/Bio310_Dog/Results/TKTL1_plink
@@ -18,6 +16,7 @@ OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/TKTL1_plink_finalcoded
 /home/ak308/software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} #to sort the chromosomes
 /home/ak308/software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
 /home/ak308/software/plink --file  ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
+
 
 ## might also have to download plink 
 cd /home/yourID
@@ -28,6 +27,7 @@ unzip plink_linux_x86_64_20250819.zip
 #test
 ./plink
 
+vim 
 ##### Convert vcf to coding ######
 sed -i 's:0/0:0:g' TKTL1_plink_finalcoded.vcf
 sed -i 's:0/1:1:g' TKTL1_plink_finalcoded.vcf
