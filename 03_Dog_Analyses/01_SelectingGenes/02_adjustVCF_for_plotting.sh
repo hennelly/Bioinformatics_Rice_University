@@ -27,4 +27,4 @@ sed -i 's:./.:3:g' KRT71_plink_finalcoded.vcf
 
 
 ### Move to local computer 
-scp -r ak308@nots.rice.edu:/scratch//ak308/Dog_Selection/Results/KRT71_plink_finalcoded.vcf ~/Desktop
+scp -r ak308@nots.rice.edu:/scratch/ak308/Dog_Selection/Results/KRT71_plink_finalcoded.vcf ~/Desktop
