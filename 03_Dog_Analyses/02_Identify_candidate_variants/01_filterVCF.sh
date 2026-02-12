@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/ak308/Bio310/output/plink.out 
-#SBATCH --error=/home/ak308/Bio310/output/plink.err
+#SBATCH --output=/home/ak308/Bio310/output/filter_KRT71.out 
+#SBATCH --error=/home/ak308/Bio310/output/filter_KRT71.err
 
 module load GCC/13.3.0
 module load VCFtools/0.1.17
