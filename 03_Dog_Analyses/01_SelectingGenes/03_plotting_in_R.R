@@ -1,4 +1,12 @@
+## Before R: 
 
+- Open the "TKTL1_plink_finalcoded.vcf" as a text edit file
+- copy the inside and paste into a Microsoft Excel file 
+- delete the first four rows (the first row should be where all the dogs are listed)
+- delete the 0 on the first sample to Affenpinscher01_33500_A and the last sample to Wolf95_B
+- save as a csv file and upload it to your R studio environment
+
+## in R: 
 
 library (ggplot2)
 library(dplyr)
@@ -6,7 +14,7 @@ library (tidyverse)
 
 ### Open the vcf file on your computer and save it as a csv file: 
 
-dat_hap <- read.csv("Oct26_Figure1_TSHR_Haplotype_phased.csv", header=TRUE)
+dat_hap <- read.csv("TKTL1_plink_finalcoded.csv", header=TRUE)
 
 # organize the dataset 
 data_long <- gather(dat_hap, Sample, Allele, Affenpinscher01_33500_A:Wolf95_B, factor_key=TRUE)
@@ -18,7 +26,11 @@ data_long$Allele <- as.factor(data_long$Allele)
 #Plot with geom_tile entire TSHR gene
 p1 <- ggplot(data_long,aes(x=POS,y=Sample,fill=Allele))+
       geom_tile() 
- p2 <- p1 + scale_fill_manual(values = c("lightblue", "red", "black", "gray", "black")) 
+ p2 <- p1 + scale_fill_manual(values = c("lightblue", "orange", "red", "gray", "black")) 
 p2
 
-ggsave("Oct31_TSHR_final.tiff", width=10,height=3) 
+# light blue is homozygous reference allele
+# orange is heterozygous
+# red is homozygous alternative allele
+
+ggsave("TKTL1_gene.tiff", width=10,height=3) 
