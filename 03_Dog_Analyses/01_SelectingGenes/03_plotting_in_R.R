@@ -1,6 +1,6 @@
 ## Before R: 
 
-- Open the "TKTL1_plink_finalcoded.vcf" as a text edit file
+- Open the "KRT71_plink_finalcoded.vcf" as a text edit file
 - copy the inside and paste into a Microsoft Excel file 
 - delete the first four rows (the first row should be where all the dogs are listed)
 - delete the 0 on the first sample to Affenpinscher01_33500_A and the last sample to Wolf95_B
@@ -14,7 +14,7 @@ library (tidyverse)
 
 ### Open the vcf file on your computer and save it as a csv file: 
 
-dat_hap <- read.csv("TKTL1_plink_finalcoded.csv", header=TRUE)
+dat_hap <- read.csv("KRT71_plink_finalcoded.csv", header=TRUE)
 
 # organize the dataset 
 data_long <- gather(dat_hap, Sample, Allele, Affenpinscher01_33500_A:Wolf95_B, factor_key=TRUE)
@@ -33,4 +33,4 @@ p2
 # orange is heterozygous
 # red is homozygous alternative allele
 
-ggsave("TKTL1_gene.tiff", width=10,height=3) 
+ggsave("KRT71_gene.tiff", width=10,height=3) 
