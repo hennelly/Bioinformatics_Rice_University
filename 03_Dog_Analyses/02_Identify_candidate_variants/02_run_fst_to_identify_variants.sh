@@ -12,9 +12,9 @@ module load GCC/13.3.0
 module load VCFtools/0.1.17
 
 VCF=/scratch/ak308/Dog_Selection/Results/KRT71_filtered.recode.vcf
-DIR=/scratch/ak308/Dog_Selection/Results
 dogpop_curly=/home/ak308/Dog_Selection/Files/KRT71_curlydogs.txt
 dogpop_noncurly=/home/ak308/Dog_Selection/Files/KRT71_noncurlydogs.txt
+OUT= /scratch/ak308/Dog_Selection/Results
 
 vcftools --gzvcf ${VCF} \
 --minQ 30 \
