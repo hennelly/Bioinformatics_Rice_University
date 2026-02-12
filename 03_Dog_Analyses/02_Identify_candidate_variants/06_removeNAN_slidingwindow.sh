@@ -8,7 +8,7 @@
 #SBATCH --output=/home/ak308/Bio310/output/removeNAN.out 
 #SBATCH --error=/home/ak308/Bio310/output/removeNAN.err
 
-FILE=/scratch/ak308/Dog_Selection/Results/KRT71_filtered_fst_results.weir.fst
+FILE=/scratch/ak308/Dog_Selection/Results/KRT71_filtered_fst_results_5kbwindow_2.5kbstep.weir.fst
 DIR=/scratch/ak308/Dog_Selection/Results/
 
-sed '/n/d' ${FILE} >  ${DIR}/KRT71_filtered_fst_results_noNAN.weir.fst.txt
+sed '/n/d' ${FILE} >  ${DIR}/KRT71_filtered_fst_results_5kbwindow_2.5kbstep_noNAN.weir.fst.txt
