@@ -1,0 +1,1 @@
+KRT71_filtered_fst_results_5kbwindow_2.5kbstep_noNAN.weir.fst.txt
