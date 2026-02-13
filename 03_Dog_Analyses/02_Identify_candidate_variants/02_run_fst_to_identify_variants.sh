@@ -14,15 +14,14 @@ module load VCFtools/0.1.17
 VCF=/scratch/ak308/Dog_Selection/Results/KRT71_filtered.recode.vcf
 dogpop_curly=/home/ak308/Dog_Selection/Files/KRT71_curlydogs.txt
 dogpop_noncurly=/home/ak308/Dog_Selection/Files/KRT71_noncurlydogs.txt
-OUT=/scratch/ak308/Dog_Selection/Results
 
-vcftools --gzvcf ${VCF} \
---minQ 30 \
---minDP 3 \
---max-missing 0.8 \
+vcftools --vcf ${VCF} \
 --weir-fst-pop ${dogpop_curly} \
 --weir-fst-pop ${dogpop_noncurly} \
---out ${OUT}/KRT71_filtered_fst_results
+--out /scratch/ak308/Dog_Selection/Results/KRT71_filtered_fst_results
+
+
+
 
 ## Make the dog population files 
 touch /scratch/ak308/Dog_Selection/Files/KRT71_curlydogs.txt
