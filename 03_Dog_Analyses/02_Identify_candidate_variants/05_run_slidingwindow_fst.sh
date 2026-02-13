@@ -16,10 +16,7 @@ dogpop_curly=/home/ak308/Dog_Selection/Files/KRT71_curlydogs.txt
 dogpop_noncurly=/home/ak308/Dog_Selection/Files/KRT71_noncurlydogs.txt
 OUT=/scratch/ak308/Dog_Selection/Results
 
-vcftools --gzvcf ${VCF} \
---minQ 30 \
---minDP 3 \
---max-missing 0.8 \
+vcftools --vcf ${VCF} \
 --fst-window-size 2500 \
 --fst-window-step 1000 \
 --weir-fst-pop ${dogpop_curly} \
