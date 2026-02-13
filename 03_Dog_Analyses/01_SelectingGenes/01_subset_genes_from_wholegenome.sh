@@ -13,7 +13,7 @@
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
-VCF=/scratch/lh106/SharedData/1697canidVCF//g_WildSled.SNP.INDEL.chrAll.newID.vcf.gz
+VCF=/scratch/lh106/SharedData/1697canidVCF/g_WildSled.SNP.INDEL.chrAll.newID.vcf.gz
 BEDIN=/scratch/ak308/bedfiles/KRT71.bed
 OUT=/scratch/ak308/Bio310_Dog/Results/KRT71_vcf
 
