@@ -13,7 +13,7 @@
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
-VCF=/storage/hpc/work/lh106/SharedData/AncientimputedVCF/merged_phased_annotated.Autosomes_MAF_0.01_recalibrated_INFO_0.8_header.vcf.gz
+VCF=/storage/hpc/work/lh106/SharedData/AncientimputedVCF/merged_phased_annotated.Autosomes_ancientdogdingo_FINAL_MAF_0.01_recalibrated_INFO_0.8.vcf.gz
 BEDIN=/scratch/ak308/bedfiles/KRT71.bed
 OUT=/scratch/ak308/Bio310_Dog/Results/KRT71_vcf_ancientcanids
 
