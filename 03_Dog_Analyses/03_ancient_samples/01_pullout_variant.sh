@@ -14,7 +14,6 @@ module load GCC/13.3.0
 module load VCFtools/0.1.17
 
 VCF=/scratch/lh106/SharedData//merged_phased_annotated.Autosomes_ancientdogdingo_FINAL_MAF_0.01_recalibrated_INFO_0.8.vcf.gz
-BEDIN=/scratch/ak308/bedfiles/KRT71.bed
 OUT=/scratch/ak308/Bio310_Dog/Results/KRT71_vcf_ancientcanids
 
 vcftools --gzvcf ${VCF} --chr [chromosome_name] --from-bp [position] --to-bp [position] --recode --recode-INFO-all --out ${OUT}
